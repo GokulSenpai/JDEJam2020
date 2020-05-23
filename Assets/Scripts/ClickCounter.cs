@@ -9,7 +9,14 @@ namespace Jam.Ghoul.Click
 {
     public class ClickCounter : MonoBehaviour
     {
+        [Space]
+        [Header("UI References")]
         [SerializeField] private Text counterText;
+
+        [Space]
+        [Header("Audio References")]
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip audioFile;
 
         private ulong mouseClickCount = 0;
 
@@ -23,7 +30,7 @@ namespace Jam.Ghoul.Click
         public void IncrementCounter()
         {
             mouseClickCount++;
-            counterText.text = mouseClickCount.ToString();
+            counterText.text = mouseClickCount.ToString("n0");
         }
 
         public void onPointerDown()
@@ -42,6 +49,7 @@ namespace Jam.Ghoul.Click
         public void onPointerClick()
         {
             IncrementCounter();
+            PlayAudio();
             holdDelay = 500f;
         }
 
@@ -52,7 +60,22 @@ namespace Jam.Ghoul.Click
             if (iHeldMouseButton && holdTimer > holdDelay)
             {
                 IncrementCounter();
+                StartCoroutine(DelayAudio());
             }
+        }
+
+        private void PlayAudio()
+        {
+            audioSource.pitch = Random.Range(0.1f, 3f);
+            audioSource.panStereo = Random.Range(-1f, 1f);
+            audioSource.PlayOneShot(audioFile);
+        }
+
+        IEnumerator DelayAudio()
+        {
+            yield return new WaitForSeconds(0.25f);
+            audioSource.volume = 0.21f;
+            PlayAudio();
         }
     }
 }
