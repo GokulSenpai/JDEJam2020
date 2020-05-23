@@ -25,7 +25,7 @@ namespace Jam.Ghoul.Click
         private float holdDelay = 500f;
         private float holdTimer = 0f;
 
-        //Remove All Pointer functions adn the Update for not having a onHoldTimeSpeed Increase
+        // Remove All Pointer functions and audio delay and the Update for not having a onHoldTimeSpeed Increase
 
         public void IncrementCounter()
         {
