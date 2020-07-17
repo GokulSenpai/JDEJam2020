@@ -1,2 +1,2 @@
-# JDEJam2020
-A clicker game for people with no friends.
+# Lain
+A personal diary for me.
