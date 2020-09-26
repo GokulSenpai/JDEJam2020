@@ -8,30 +8,30 @@ public class PasswordProtection : MonoBehaviour
 {
     public TMP_InputField inputPassword;
     public TMP_Text wiredTitle;
+
+    public GameObject wrongPasswordUi;
     
     private const string Password = "Password";
-    private string m_wiredTitleBackup = "The Wired";
     public void PasswordChecker()
     {
         if (PlayerPrefs.GetString(Password) == inputPassword.text)
         {
+            Debug.Log("Correct Password");
             // Go to next menu
         }
         else
         {
             Debug.Log("Wrong Password");
+            //wiredTitle.text = "Wrong";
+            wrongPasswordUi.SetActive(true);
             
-            wiredTitle.text = m_wiredTitleBackup;
-            gameObject.GetComponent<LetterRandomize>().enabled = false;
-            wiredTitle.text = "Wrong";
-            StartCoroutine(SetWiredTitleBack());
+            StartCoroutine(DisableWrongUi());
         }
     }
 
-    private IEnumerator SetWiredTitleBack()
+    private IEnumerator DisableWrongUi()
     {
-        gameObject.GetComponent<LetterRandomize>().enabled = true;
-        yield return new WaitForSeconds(7);
-        wiredTitle.text = m_wiredTitleBackup;
+        yield return new WaitForSeconds(3);
+        wrongPasswordUi.SetActive(false);
     }
 }

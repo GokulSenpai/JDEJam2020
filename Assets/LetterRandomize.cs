@@ -33,11 +33,11 @@ public class LetterRandomize : MonoBehaviour
     {
         if (m_timeToShuffle)
         {
-            textToShuffleReference.text = m_originalTextBackup;
             InvokeRepeating(nameof(EveryDayImShuffling), timeToInvokeShuffles, shuffleStopAfter);
         }
         else
-        {
+        {    
+            // Uncomment for glitch effect
             //textToShuffleReference.text = m_originalTextBackup;
         }
     }
@@ -57,6 +57,7 @@ public class LetterRandomize : MonoBehaviour
     private IEnumerator ItsNotABugItsAFeature()
     {
         yield return new WaitForSeconds(timeBeforeStartingShuffle);
+        
         // Glitch - feature reproduces here
         m_timeToShuffle = true;
         yield return new WaitForSeconds(0.5f);

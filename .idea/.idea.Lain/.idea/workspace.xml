@@ -22,6 +22,7 @@
     <list default="true" id="e9704481-1562-497d-8f4b-0a3d8c07fa69" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lain/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lain/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/LetterRandomize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LetterRandomize.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PasswordProtection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PasswordProtection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainPage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainPage.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
