@@ -11,7 +11,7 @@ public class LetterRandomize : MonoBehaviour
 {
     public TMP_Text textToShuffleReference;
     public float timeToInvokeShuffles = 1f;
-    public float shuffleStopAfter = 3f;
+    public float shuffleStopAfter = 1f;
     public float timeBeforeStartingShuffle = 7f;
 
     private string m_originalTextBackup;
@@ -33,11 +33,12 @@ public class LetterRandomize : MonoBehaviour
     {
         if (m_timeToShuffle)
         {
+            textToShuffleReference.text = m_originalTextBackup;
             InvokeRepeating(nameof(EveryDayImShuffling), timeToInvokeShuffles, shuffleStopAfter);
         }
         else
         {
-            textToShuffleReference.text = m_originalTextBackup;
+            //textToShuffleReference.text = m_originalTextBackup;
         }
     }
 
@@ -56,6 +57,7 @@ public class LetterRandomize : MonoBehaviour
     private IEnumerator ItsNotABugItsAFeature()
     {
         yield return new WaitForSeconds(timeBeforeStartingShuffle);
+        // Glitch - feature reproduces here
         m_timeToShuffle = true;
         yield return new WaitForSeconds(0.5f);
         m_timeToShuffle = false;

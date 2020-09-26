@@ -3886,7 +3886,7 @@ MonoBehaviour:
   textToShuffleReference: {fileID: 459691890}
   timeToInvokeShuffles: 1
   shuffleStopAfter: 3
-  timeBeforeStartingShuffle: 7
+  timeBeforeStartingShuffle: 2
 --- !u!114 &1262219412
 MonoBehaviour:
   m_ObjectHideFlags: 0
