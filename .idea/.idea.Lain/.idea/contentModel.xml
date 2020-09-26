@@ -10,6 +10,7 @@
         <e p="Scripts" t="Include">
           <e p="InputFieldForScreenKeyboardPanelAdjuster.cs" t="Include" />
         </e>
+        <e p="SetNewPassword.cs" t="Include" />
         <e p="Tayx" t="Include">
           <e p="Graphy - Ultimate Stats Monitor" t="Include">
             <e p="Changelog.txt" t="Include" />

@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9704481-1562-497d-8f4b-0a3d8c07fa69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lain/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lain/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lain/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lain/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lain/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lain/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PasswordProtection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PasswordProtection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainPage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainPage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
@@ -37,6 +37,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/SetNewPassword.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PasswordProtection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LetterRandomize.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputFieldForScreenKeyboardPanelAdjuster.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,6 +52,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InputFieldForScreenKeyboardPanelAdjuster.cs" />
         <option value="$PROJECT_DIR$/Assets/LetterRandomiser.cs" />
         <option value="$PROJECT_DIR$/Assets/LetterRandomize.cs" />
+        <option value="$PROJECT_DIR$/Assets/SetNewPassword.cs" />
+        <option value="$PROJECT_DIR$/Assets/PasswordProtection.cs" />
       </list>
     </option>
   </component>
@@ -95,7 +98,7 @@
       <workItem from="1595038476628" duration="3068000" />
       <workItem from="1595043113529" duration="1956000" />
       <workItem from="1595595749015" duration="2010000" />
-      <workItem from="1601105165042" duration="4581000" />
+      <workItem from="1601105165042" duration="7366000" />
     </task>
     <servers />
   </component>
