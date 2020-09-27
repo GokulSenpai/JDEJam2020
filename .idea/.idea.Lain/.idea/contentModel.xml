@@ -5,12 +5,17 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="LetterRandomize.cs" t="Include" />
-        <e p="PasswordProtection.cs" t="Include" />
+        <e p="DiaryEntryContentPage.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="InputFieldForScreenKeyboardPanelAdjuster.cs" t="Include" />
+          <e p="LetterRandomize.cs" t="Include" />
+          <e p="PasswordProtection.cs" t="Include" />
+          <e p="Save" t="Include">
+            <e p="DiaryEntryData.cs" t="Include" />
+            <e p="SaveSystem.cs" t="Include" />
+          </e>
+          <e p="SetNewPassword.cs" t="Include" />
         </e>
-        <e p="SetNewPassword.cs" t="Include" />
         <e p="Tayx" t="Include">
           <e p="Graphy - Ultimate Stats Monitor" t="Include">
             <e p="Changelog.txt" t="Include" />
