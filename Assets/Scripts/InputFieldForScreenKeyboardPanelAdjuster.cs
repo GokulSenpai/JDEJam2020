@@ -9,41 +9,41 @@ public class InputFieldForScreenKeyboardPanelAdjuster : MonoBehaviour {
     // Assign panel here in order to adjust its height when TouchScreenKeyboard is shown
     public GameObject panel;
 
-    private TMP_InputField inputField;
-    private RectTransform panelRectTrans;
-    private Vector2 panelOffsetMinOriginal;
-    private float panelHeightOriginal;
-    private float currentKeyboardHeightRatio;
+    private TMP_InputField m_inputField;
+    private RectTransform m_panelRectTrans;
+    private Vector2 m_panelOffsetMinOriginal;
+    private float m_panelHeightOriginal;
+    private float m_currentKeyboardHeightRatio;
 
     public void Start() {
-        inputField = transform.GetComponent<TMP_InputField>();
-        panelRectTrans = panel.GetComponent<RectTransform>();
-        panelOffsetMinOriginal = panelRectTrans.offsetMin;
-        panelHeightOriginal = panelRectTrans.rect.height;
+        m_inputField = transform.GetComponent<TMP_InputField>();
+        m_panelRectTrans = panel.GetComponent<RectTransform>();
+        m_panelOffsetMinOriginal = m_panelRectTrans.offsetMin;
+        m_panelHeightOriginal = m_panelRectTrans.rect.height;
     }
 
     public void LateUpdate () {
-        if (inputField.isFocused) {
+        if (m_inputField.isFocused) {
             float newKeyboardHeightRatio = GetKeyboardHeightRatio();
-            if (currentKeyboardHeightRatio != newKeyboardHeightRatio) {
+            if (m_currentKeyboardHeightRatio != newKeyboardHeightRatio) {
                 Debug.Log("InputFieldForScreenKeyboardPanelAdjuster: Adjust to keyboard height ratio: " + newKeyboardHeightRatio);
-                currentKeyboardHeightRatio = newKeyboardHeightRatio;
-                panelRectTrans.offsetMin = new Vector2(panelOffsetMinOriginal.x, panelHeightOriginal * currentKeyboardHeightRatio);
+                m_currentKeyboardHeightRatio = newKeyboardHeightRatio;
+                m_panelRectTrans.offsetMin = new Vector2(m_panelOffsetMinOriginal.x, m_panelHeightOriginal * m_currentKeyboardHeightRatio);
             }
-        } else if (currentKeyboardHeightRatio != 0f) {
-            if (panelRectTrans.offsetMin != panelOffsetMinOriginal)
+        } else if (m_currentKeyboardHeightRatio != 0f) {
+            if (m_panelRectTrans.offsetMin != m_panelOffsetMinOriginal)
             {
                 StartCoroutine(DelayedExecute());
             }
             
-            currentKeyboardHeightRatio = 0f;
+            m_currentKeyboardHeightRatio = 0f;
         }
     }
 
     private IEnumerator DelayedExecute()
     {
         Debug.Log("InputFieldForScreenKeyboardPanelAdjuster: Revert to original");
-        panelRectTrans.offsetMin = panelOffsetMinOriginal;
+        m_panelRectTrans.offsetMin = m_panelOffsetMinOriginal;
         yield return new WaitForSeconds(0.5f);
     }
 
@@ -53,10 +53,10 @@ public class InputFieldForScreenKeyboardPanelAdjuster : MonoBehaviour {
         }
 
 #if UNITY_ANDROID        
-        using (AndroidJavaClass UnityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer")) {
-            AndroidJavaObject View = UnityClass.GetStatic<AndroidJavaObject>("currentActivity").Get<AndroidJavaObject>("mUnityPlayer").Call<AndroidJavaObject>("getView");
+        using (AndroidJavaClass unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer")) {
+            AndroidJavaObject view = unityClass.GetStatic<AndroidJavaObject>("currentActivity").Get<AndroidJavaObject>("mUnityPlayer").Call<AndroidJavaObject>("getView");
             using (AndroidJavaObject rect = new AndroidJavaObject("android.graphics.Rect")) {
-                View.Call("getWindowVisibleDisplayFrame", rect);
+                view.Call("getWindowVisibleDisplayFrame", rect);
                 return (float)(Screen.height - rect.Call<int>("height")) / Screen.height;
             }
         }
