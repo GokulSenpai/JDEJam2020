@@ -29,8 +29,6 @@ public class PageFlowManager : MonoBehaviour
     public void PasswordSet()
     {
         StartCoroutine(TimeoutPasswordSetScreenCoroutine());
-        setPasswordPage.SetActive(false);
-        diaryListPage.SetActive(true);
     }
 
     private IEnumerator TimeoutPasswordSetScreenCoroutine()
@@ -38,6 +36,9 @@ public class PageFlowManager : MonoBehaviour
         passwordSetPage.SetActive(true);
         yield return new WaitForSeconds(3);
         passwordSetPage.SetActive(false);
+        
+        setPasswordPage.SetActive(false);
+        diaryListPage.SetActive(true);
     }
     
     
