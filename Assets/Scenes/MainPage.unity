@@ -674,7 +674,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1262219412}
+      - m_Target: {fileID: 1501757520}
         m_MethodName: PasswordChecker
         m_Mode: 1
         m_Arguments:
@@ -856,7 +856,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 446584353}
+      - m_Target: {fileID: 1501757520}
         m_MethodName: OnSetPasswordButtonClick
         m_Mode: 1
         m_Arguments:
@@ -1145,6 +1145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 404159018}
+  - component: {fileID: 404159019}
   m_Layer: 5
   m_Name: ClickCount
   m_TagString: Untagged
@@ -1172,6 +1173,60 @@ RectTransform:
   m_AnchoredPosition: {x: -16, y: 2}
   m_SizeDelta: {x: 1620, y: 4096}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &404159019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404159017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 941858230}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 937543830}
+        m_MethodName: MainPageButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &421991006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,7 +1289,6 @@ GameObject:
   m_Component:
   - component: {fileID: 446584352}
   - component: {fileID: 446584354}
-  - component: {fileID: 446584353}
   m_Layer: 5
   m_Name: SetPasswordPage
   m_TagString: Untagged
@@ -1265,20 +1319,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &446584353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446584351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfff775d4c560cc4781889de27ee2b84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enteredPassword: {fileID: 799173579}
-  passwordSetUi: {fileID: 475323879}
 --- !u!114 &446584354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3071,6 +3111,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928773602}
   m_CullTransparentMesh: 0
+--- !u!1 &937543829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937543831}
+  - component: {fileID: 937543830}
+  m_Layer: 0
+  m_Name: PageFlowManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &937543830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937543829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb46bdbdccd40a84e8443f135446f14e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainPage: {fileID: 1117939899}
+  setPasswordPage: {fileID: 446584351}
+  passwordSetPage: {fileID: 475323879}
+  enterPasswordPage: {fileID: 1262219409}
+  wrongPasswordPage: {fileID: 1617951521}
+  diaryListPage: {fileID: 1942196461}
+  diaryContentPage: {fileID: 2017270506}
+--- !u!4 &937543831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937543829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &941858228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3551,7 +3641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1117939900
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4256,7 +4346,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1262219410}
   - component: {fileID: 1262219411}
-  - component: {fileID: 1262219412}
   m_Layer: 5
   m_Name: EnterPasswordPage
   m_TagString: Untagged
@@ -4303,21 +4392,6 @@ MonoBehaviour:
   timeToInvokeShuffles: 1
   shuffleStopAfter: 3
   timeBeforeStartingShuffle: 7
---- !u!114 &1262219412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262219409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04bc215f275acdb45a8cb4b9b81e923f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputPassword: {fileID: 1565650227}
-  wiredTitle: {fileID: 459691890}
-  wrongPasswordUi: {fileID: 1617951521}
 --- !u!1 &1334881168
 GameObject:
   m_ObjectHideFlags: 0
@@ -4922,6 +4996,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479499816}
   m_CullTransparentMesh: 0
+--- !u!1 &1501757519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1501757521}
+  - component: {fileID: 1501757520}
+  m_Layer: 0
+  m_Name: PasswordManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1501757520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501757519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac5bc9cda3207f4448552ef5efc12d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setPassword: {fileID: 799173579}
+  enteredPassword: {fileID: 1565650227}
+--- !u!4 &1501757521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501757519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1505660997
 GameObject:
   m_ObjectHideFlags: 0
@@ -5827,7 +5946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8014a8a102e1054a887ce324b042a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rails: 2
+  rails: 7
 --- !u!1 &1798101440
 GameObject:
   m_ObjectHideFlags: 0
@@ -6593,7 +6712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4395a698a4ae704aa0cb3c57b707ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  number: 7
+  number: 1
   title: T1
   content: This is test 1 using encryption
 --- !u!4 &1949835482
